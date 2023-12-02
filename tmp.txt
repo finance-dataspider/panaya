@@ -1,0 +1,7 @@
+
+# Stage 2: Nginx stage
+FROM nginx:alpine
+
+COPY --from=builder /usr/share/nginx/html /usr/share/nginx/html
+
+EXPOSE 9980
