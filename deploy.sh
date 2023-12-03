@@ -15,5 +15,5 @@ echo "MySQL Host: $mysql_host"
 docker stop nginx_container
 # Remove the nginx_container
 docker rm nginx_container
-docker build --build-arg MYSQL_HOST=$mysql_host -f ./images/nginx/ -t panaya_nginx:1.0
+docker build --build-arg MYSQL_HOST=$mysql_host -f ./images/nginx/Dockerfile . -t panaya_nginx:1.0 
 docker run -p 9980:9980 -d --name nginx_container panaya_nginx:1.0
